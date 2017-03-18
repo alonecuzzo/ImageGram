@@ -11,12 +11,18 @@ import SnapKit
 import UIKit
 
 
-//leave note about not using the default title label and imageview
+/**
+ * TableViewCell that contains the imageView and the title label.
+ * Note: I declined to use the textLabel and the imageView that come
+ *       with UITableViewCell for free because I like to see all
+ *       properties listed out explicitly.  I feel it makes the code
+ *       read more expressively.
+ */
 class FeedTableViewCell: UITableViewCell {
-    
+
     //MARK: Property
     static let identifier = "FeedTableViewCellIdentifier"
-    
+
     let photoImageView = UIImageView(frame: .zero)
     var photoTitle: String = "" {
         didSet {
@@ -24,19 +30,19 @@ class FeedTableViewCell: UITableViewCell {
         }
     }
     private let photoTitleLabel = UILabel(frame: .zero)
-    
-    
+
+
     //MARK: Method
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         setup()
     }
-    
+
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         setup()
     }
-    
+
     private func setup() {
         selectionStyle = .none
         let horizontalInset = 32
@@ -46,7 +52,7 @@ class FeedTableViewCell: UITableViewCell {
             make.width.height.equalTo(150)
             make.left.equalTo(contentView).inset(horizontalInset)
         }
-        
+
         photoTitleLabel.lineBreakMode = .byWordWrapping
         photoTitleLabel.numberOfLines = 0
         contentView.addSubview(photoTitleLabel)

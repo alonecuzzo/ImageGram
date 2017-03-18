@@ -24,14 +24,5 @@ xcuserdata/
 *.dSYM.zip
 *.dSYM
 
-##Carthage
-Carthage/Checkouts/
-Carthage/Build/Mac/
-Carthage/Build/tvOS/
-Carthage/Build/watchOS/
-
 ##Fastlane
 fastlane/test_output/
-
-##CodeCov
-xcov_output/

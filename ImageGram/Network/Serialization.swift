@@ -10,6 +10,8 @@ import Foundation
 import Alamofire
 
 
+//This file is heavily taken from Alamofire's serialization guide.
+
 protocol LocalObjectSerializable {
     init?(dictionary: [String: Any])
     var dictionaryValue: [String: Any] { get }
@@ -25,15 +27,17 @@ extension DataRequest {
     @discardableResult
     func responseObject<T: ResponseObjectSerializable>(queue: DispatchQueue? = nil, completionHandler: @escaping (DataResponse<T>) -> Void) -> Self {
         let responseSerializer = DataResponseSerializer<T> { request, response, data, error in
-            // TODO: HANDLE ERROR
-            
+
+            //NOTE: Error handling would go here.
+
             let jsonResponseSerializer = DataRequest.jsonResponseSerializer(options: .allowFragments)
             let result = jsonResponseSerializer.serializeResponse(request, response, data, nil)
-            
+
             guard case let .success(jsonObject) = result else {
                 fatalError("CRASH ON SERIALIZING")
+                //NOTE: Error handling would go here.
             }
-            
+
             let responseObject = T(response: response!, representation: jsonObject)!
             return .success(responseObject)
         }
@@ -66,22 +70,19 @@ extension DataRequest {
         completionHandler: @escaping (DataResponse<[T]>) -> Void) -> Self
     {
         let responseSerializer = DataResponseSerializer<[T]> { request, response, data, error in
-            //gotta handle errors
-            //guard error == nil else { return .failure(BackendError.network(error: error!)) }
+            //NOTE: Error handling would go here.
             let jsonSerializer = DataRequest.jsonResponseSerializer(options: .allowFragments)
             let result = jsonSerializer.serializeResponse(request, response, data, nil)
-            
+
             guard case let .success(jsonObject) = result else {
-                //return .failure(BackendError.jsonSerialization(error: result.error!))
                 fatalError("CRASH ON SERIALIZING")
+                //NOTE: I am assuming the happy path for this project.
+                //      I would add error handling here, if there was a failure
+                //      on serializing.
             }
-            // guard let response = response else {
-            //   let reason = "Response collection could not be serialized due to nil response."
-            // return .failure(BackendError.objectSerialization(reason: reason))
-            //}
             return .success(T.collection(from: response!, withRepresentation: jsonObject))
         }
-        
+
         return response(responseSerializer: responseSerializer, completionHandler: completionHandler)
     }
 }
