@@ -15,6 +15,7 @@ import Alamofire
 
 @testable import ImageGram
 
+//MAYBE DO SHALLOW VERSION AND DEEP VERSION OF THE VIEW MODEL TEST
 
 class FeedViewModelSpec: QuickSpec {
     
