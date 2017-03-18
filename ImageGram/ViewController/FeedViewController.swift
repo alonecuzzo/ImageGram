@@ -9,12 +9,7 @@
 import UIKit
 import SnapKit
 import RxSwift
-import Alamofire
-
-
-struct FeedViewModel {
-    
-}
+import RxCocoa
 
 
 class FeedViewController: UIViewController {
@@ -22,8 +17,11 @@ class FeedViewController: UIViewController {
     //MARK: Property
     private let tableView = UITableView(frame: .zero)
     private let viewModel: FeedViewModel //perhaps can be protocol constrained - bound to a generic type
+    private lazy var photos: Observable<[Photo]> = { [unowned self] in
+       return self.viewModel.photos.asObservable()
+    }()
     private let disposeBag = DisposeBag()
-
+    
     
     //MARK: Lifecycle
     init(viewModel: FeedViewModel) {
@@ -44,16 +42,22 @@ class FeedViewController: UIViewController {
     //MARK: Setup
     private func setup() {
         setupTableView()
+        setupBindings()
+        viewModel.getPhotos()
     }
     
     private func setupTableView() {
         view.addSubview(tableView)
+        tableView.register(FeedTableViewCell.self, forCellReuseIdentifier: FeedTableViewCell.identifier)
+        tableView.rowHeight = 200
         tableView.snp.makeConstraints { make in
             make.edges.equalTo(view)
         }
-        
-        API.getPhotos().subscribe(onNext: { photos in
-            print("got the photos! \(photos.count) photos")
-        }).addDisposableTo(disposeBag)
+    }
+    
+    private func setupBindings() {
+        photos.bindTo(tableView.rx.items) { tv, row, photo in
+            FeedTableViewCellFactory.feedCell(tv, forRow: row, photo: photo)
+        }.addDisposableTo(disposeBag)
     }
 }

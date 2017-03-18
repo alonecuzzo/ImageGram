@@ -24,6 +24,9 @@
 		06A921AD1E7D630D001BDFF2 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06A921AC1E7D630D001BDFF2 /* Router.swift */; };
 		06A921AF1E7D6363001BDFF2 /* EndpointSampleStringConvertable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06A921AE1E7D6363001BDFF2 /* EndpointSampleStringConvertable.swift */; };
 		06A921B21E7D63A3001BDFF2 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06A921B11E7D63A3001BDFF2 /* Photo.swift */; };
+		06A921B51E7D7596001BDFF2 /* FeedTableViewCellFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06A921B41E7D7596001BDFF2 /* FeedTableViewCellFactory.swift */; };
+		06A921B81E7D77F0001BDFF2 /* FeedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06A921B71E7D77F0001BDFF2 /* FeedViewModel.swift */; };
+		06A921BA1E7D7E86001BDFF2 /* FeedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06A921B91E7D7E86001BDFF2 /* FeedTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +60,9 @@
 		06A921AC1E7D630D001BDFF2 /* Router.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Router.swift; path = Network/Router.swift; sourceTree = "<group>"; };
 		06A921AE1E7D6363001BDFF2 /* EndpointSampleStringConvertable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EndpointSampleStringConvertable.swift; path = Network/EndpointSampleStringConvertable.swift; sourceTree = "<group>"; };
 		06A921B11E7D63A3001BDFF2 /* Photo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Photo.swift; path = Model/Photo.swift; sourceTree = "<group>"; };
+		06A921B41E7D7596001BDFF2 /* FeedTableViewCellFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FeedTableViewCellFactory.swift; path = View/FeedTableViewCellFactory.swift; sourceTree = "<group>"; };
+		06A921B71E7D77F0001BDFF2 /* FeedViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FeedViewModel.swift; path = ViewModel/FeedViewModel.swift; sourceTree = "<group>"; };
+		06A921B91E7D7E86001BDFF2 /* FeedTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FeedTableViewCell.swift; path = View/FeedTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,7 +115,9 @@
 				06A921B01E7D638E001BDFF2 /* Model */,
 				06A921A71E7D6141001BDFF2 /* Network */,
 				06A921921E7D5867001BDFF2 /* Other Files */,
+				06A921B31E7D7568001BDFF2 /* View */,
 				06A9218F1E7D55EA001BDFF2 /* ViewController */,
+				06A921B61E7D77CF001BDFF2 /* ViewModel */,
 			);
 			path = ImageGram;
 			sourceTree = "<group>";
@@ -171,6 +179,23 @@
 				06A921B11E7D63A3001BDFF2 /* Photo.swift */,
 			);
 			name = Model;
+			sourceTree = "<group>";
+		};
+		06A921B31E7D7568001BDFF2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				06A921B91E7D7E86001BDFF2 /* FeedTableViewCell.swift */,
+				06A921B41E7D7596001BDFF2 /* FeedTableViewCellFactory.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		06A921B61E7D77CF001BDFF2 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				06A921B71E7D77F0001BDFF2 /* FeedViewModel.swift */,
+			);
+			name = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -302,6 +327,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				06A921B51E7D7596001BDFF2 /* FeedTableViewCellFactory.swift in Sources */,
 				06A921B21E7D63A3001BDFF2 /* Photo.swift in Sources */,
 				06A921911E7D561E001BDFF2 /* FeedViewController.swift in Sources */,
 				06A921AF1E7D6363001BDFF2 /* EndpointSampleStringConvertable.swift in Sources */,
@@ -309,6 +335,8 @@
 				06A921AD1E7D630D001BDFF2 /* Router.swift in Sources */,
 				06A921AB1E7D62CA001BDFF2 /* API.swift in Sources */,
 				06A921701E7D538E001BDFF2 /* AppDelegate.swift in Sources */,
+				06A921B81E7D77F0001BDFF2 /* FeedViewModel.swift in Sources */,
+				06A921BA1E7D7E86001BDFF2 /* FeedTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
