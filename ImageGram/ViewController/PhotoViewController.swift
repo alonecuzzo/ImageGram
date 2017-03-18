@@ -26,13 +26,6 @@ class PhotoViewController: UIViewController {
     }
     
     
-    4
-    5
-    6
-    7
-    8
-    9
-    10
     /**
      This is an extremely complicated method that concatenates the first and last name and produces the full name.
      

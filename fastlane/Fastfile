@@ -50,11 +50,6 @@ platform :ios do
     # frameit
   end
 
-  desc "Generate Docs"
-  lane :jazzydocs do
-    jazzy(config: ".jazzy.yaml")
-  end
-
   # You can define as many lanes as you want
 
   after_all do |lane|
