@@ -8,11 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		06A921701E7D538E001BDFF2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06A9216F1E7D538E001BDFF2 /* AppDelegate.swift */; };
-		06A921721E7D538E001BDFF2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06A921711E7D538E001BDFF2 /* ViewController.swift */; };
-		06A921751E7D538E001BDFF2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 06A921731E7D538E001BDFF2 /* Main.storyboard */; };
-		06A921771E7D538E001BDFF2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 06A921761E7D538E001BDFF2 /* Assets.xcassets */; };
-		06A9217A1E7D538E001BDFF2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 06A921781E7D538E001BDFF2 /* LaunchScreen.storyboard */; };
 		06A921851E7D538E001BDFF2 /* ImageGramTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06A921841E7D538E001BDFF2 /* ImageGramTests.swift */; };
+		06A921911E7D561E001BDFF2 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06A921901E7D561E001BDFF2 /* FeedViewController.swift */; };
+		06A921961E7D59DD001BDFF2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 06A921931E7D59DD001BDFF2 /* Assets.xcassets */; };
+		06A921971E7D59DD001BDFF2 /* Base.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 06A921941E7D59DD001BDFF2 /* Base.lproj */; };
+		06A921981E7D59DD001BDFF2 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 06A921951E7D59DD001BDFF2 /* Info.plist */; };
+		06A921A11E7D5C67001BDFF2 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06A9219B1E7D5C67001BDFF2 /* Alamofire.framework */; };
+		06A921A21E7D5C67001BDFF2 /* AlamofireImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06A9219C1E7D5C67001BDFF2 /* AlamofireImage.framework */; };
+		06A921A31E7D5C67001BDFF2 /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06A9219D1E7D5C67001BDFF2 /* RxCocoa.framework */; };
+		06A921A41E7D5C67001BDFF2 /* RxDataSources.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06A9219E1E7D5C67001BDFF2 /* RxDataSources.framework */; };
+		06A921A51E7D5C67001BDFF2 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06A9219F1E7D5C67001BDFF2 /* RxSwift.framework */; };
+		06A921A61E7D5C67001BDFF2 /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06A921A01E7D5C67001BDFF2 /* SnapKit.framework */; };
+		06A921A91E7D616E001BDFF2 /* Serialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06A921A81E7D616E001BDFF2 /* Serialization.swift */; };
+		06A921AB1E7D62CA001BDFF2 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06A921AA1E7D62CA001BDFF2 /* API.swift */; };
+		06A921AD1E7D630D001BDFF2 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06A921AC1E7D630D001BDFF2 /* Router.swift */; };
+		06A921AF1E7D6363001BDFF2 /* EndpointSampleStringConvertable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06A921AE1E7D6363001BDFF2 /* EndpointSampleStringConvertable.swift */; };
+		06A921B21E7D63A3001BDFF2 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06A921B11E7D63A3001BDFF2 /* Photo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,14 +39,24 @@
 /* Begin PBXFileReference section */
 		06A9216C1E7D538E001BDFF2 /* ImageGram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ImageGram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		06A9216F1E7D538E001BDFF2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		06A921711E7D538E001BDFF2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		06A921741E7D538E001BDFF2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		06A921761E7D538E001BDFF2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		06A921791E7D538E001BDFF2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		06A9217B1E7D538E001BDFF2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		06A921801E7D538E001BDFF2 /* ImageGramTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ImageGramTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		06A921841E7D538E001BDFF2 /* ImageGramTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageGramTests.swift; sourceTree = "<group>"; };
 		06A921861E7D538E001BDFF2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		06A921901E7D561E001BDFF2 /* FeedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FeedViewController.swift; path = ViewController/FeedViewController.swift; sourceTree = "<group>"; };
+		06A921931E7D59DD001BDFF2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = "Other Files/Assets.xcassets"; sourceTree = "<group>"; };
+		06A921941E7D59DD001BDFF2 /* Base.lproj */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Base.lproj; path = "Other Files/Base.lproj"; sourceTree = "<group>"; };
+		06A921951E7D59DD001BDFF2 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = "Other Files/Info.plist"; sourceTree = "<group>"; };
+		06A9219B1E7D5C67001BDFF2 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = SOURCE_ROOT; };
+		06A9219C1E7D5C67001BDFF2 /* AlamofireImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AlamofireImage.framework; path = Carthage/Build/iOS/AlamofireImage.framework; sourceTree = SOURCE_ROOT; };
+		06A9219D1E7D5C67001BDFF2 /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/iOS/RxCocoa.framework; sourceTree = SOURCE_ROOT; };
+		06A9219E1E7D5C67001BDFF2 /* RxDataSources.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxDataSources.framework; path = Carthage/Build/iOS/RxDataSources.framework; sourceTree = SOURCE_ROOT; };
+		06A9219F1E7D5C67001BDFF2 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = SOURCE_ROOT; };
+		06A921A01E7D5C67001BDFF2 /* SnapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SnapKit.framework; path = Carthage/Build/iOS/SnapKit.framework; sourceTree = SOURCE_ROOT; };
+		06A921A81E7D616E001BDFF2 /* Serialization.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Serialization.swift; path = Network/Serialization.swift; sourceTree = "<group>"; };
+		06A921AA1E7D62CA001BDFF2 /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = API.swift; path = Network/API.swift; sourceTree = "<group>"; };
+		06A921AC1E7D630D001BDFF2 /* Router.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Router.swift; path = Network/Router.swift; sourceTree = "<group>"; };
+		06A921AE1E7D6363001BDFF2 /* EndpointSampleStringConvertable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EndpointSampleStringConvertable.swift; path = Network/EndpointSampleStringConvertable.swift; sourceTree = "<group>"; };
+		06A921B11E7D63A3001BDFF2 /* Photo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Photo.swift; path = Model/Photo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +64,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				06A921A51E7D5C67001BDFF2 /* RxSwift.framework in Frameworks */,
+				06A921A31E7D5C67001BDFF2 /* RxCocoa.framework in Frameworks */,
+				06A921A11E7D5C67001BDFF2 /* Alamofire.framework in Frameworks */,
+				06A921A61E7D5C67001BDFF2 /* SnapKit.framework in Frameworks */,
+				06A921A21E7D5C67001BDFF2 /* AlamofireImage.framework in Frameworks */,
+				06A921A41E7D5C67001BDFF2 /* RxDataSources.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,11 +105,11 @@
 			isa = PBXGroup;
 			children = (
 				06A9216F1E7D538E001BDFF2 /* AppDelegate.swift */,
-				06A921711E7D538E001BDFF2 /* ViewController.swift */,
-				06A921731E7D538E001BDFF2 /* Main.storyboard */,
-				06A921761E7D538E001BDFF2 /* Assets.xcassets */,
-				06A921781E7D538E001BDFF2 /* LaunchScreen.storyboard */,
-				06A9217B1E7D538E001BDFF2 /* Info.plist */,
+				06A921991E7D5A69001BDFF2 /* Frameworks */,
+				06A921B01E7D638E001BDFF2 /* Model */,
+				06A921A71E7D6141001BDFF2 /* Network */,
+				06A921921E7D5867001BDFF2 /* Other Files */,
+				06A9218F1E7D55EA001BDFF2 /* ViewController */,
 			);
 			path = ImageGram;
 			sourceTree = "<group>";
@@ -96,6 +123,56 @@
 			path = ImageGramTests;
 			sourceTree = "<group>";
 		};
+		06A9218F1E7D55EA001BDFF2 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				06A921901E7D561E001BDFF2 /* FeedViewController.swift */,
+			);
+			name = ViewController;
+			sourceTree = "<group>";
+		};
+		06A921921E7D5867001BDFF2 /* Other Files */ = {
+			isa = PBXGroup;
+			children = (
+				06A921931E7D59DD001BDFF2 /* Assets.xcassets */,
+				06A921941E7D59DD001BDFF2 /* Base.lproj */,
+				06A921951E7D59DD001BDFF2 /* Info.plist */,
+			);
+			name = "Other Files";
+			sourceTree = "<group>";
+		};
+		06A921991E7D5A69001BDFF2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				06A9219B1E7D5C67001BDFF2 /* Alamofire.framework */,
+				06A9219C1E7D5C67001BDFF2 /* AlamofireImage.framework */,
+				06A9219D1E7D5C67001BDFF2 /* RxCocoa.framework */,
+				06A9219E1E7D5C67001BDFF2 /* RxDataSources.framework */,
+				06A9219F1E7D5C67001BDFF2 /* RxSwift.framework */,
+				06A921A01E7D5C67001BDFF2 /* SnapKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		06A921A71E7D6141001BDFF2 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				06A921AA1E7D62CA001BDFF2 /* API.swift */,
+				06A921AE1E7D6363001BDFF2 /* EndpointSampleStringConvertable.swift */,
+				06A921AC1E7D630D001BDFF2 /* Router.swift */,
+				06A921A81E7D616E001BDFF2 /* Serialization.swift */,
+			);
+			name = Network;
+			sourceTree = "<group>";
+		};
+		06A921B01E7D638E001BDFF2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				06A921B11E7D63A3001BDFF2 /* Photo.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -106,6 +183,7 @@
 				06A921681E7D538D001BDFF2 /* Sources */,
 				06A921691E7D538D001BDFF2 /* Frameworks */,
 				06A9216A1E7D538D001BDFF2 /* Resources */,
+				06A9219A1E7D5A7F001BDFF2 /* Carthage */,
 			);
 			buildRules = (
 			);
@@ -181,9 +259,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				06A9217A1E7D538E001BDFF2 /* LaunchScreen.storyboard in Resources */,
-				06A921771E7D538E001BDFF2 /* Assets.xcassets in Resources */,
-				06A921751E7D538E001BDFF2 /* Main.storyboard in Resources */,
+				06A921971E7D59DD001BDFF2 /* Base.lproj in Resources */,
+				06A921961E7D59DD001BDFF2 /* Assets.xcassets in Resources */,
+				06A921981E7D59DD001BDFF2 /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -196,12 +274,40 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		06A9219A1E7D5A7F001BDFF2 /* Carthage */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/RxSwift.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RxDataSources.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/SnapKit.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/AlamofireImage.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RxCocoa.framework",
+			);
+			name = Carthage;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		06A921681E7D538D001BDFF2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				06A921721E7D538E001BDFF2 /* ViewController.swift in Sources */,
+				06A921B21E7D63A3001BDFF2 /* Photo.swift in Sources */,
+				06A921911E7D561E001BDFF2 /* FeedViewController.swift in Sources */,
+				06A921AF1E7D6363001BDFF2 /* EndpointSampleStringConvertable.swift in Sources */,
+				06A921A91E7D616E001BDFF2 /* Serialization.swift in Sources */,
+				06A921AD1E7D630D001BDFF2 /* Router.swift in Sources */,
+				06A921AB1E7D62CA001BDFF2 /* API.swift in Sources */,
 				06A921701E7D538E001BDFF2 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -223,25 +329,6 @@
 			targetProxy = 06A921811E7D538E001BDFF2 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		06A921731E7D538E001BDFF2 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				06A921741E7D538E001BDFF2 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		06A921781E7D538E001BDFF2 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				06A921791E7D538E001BDFF2 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		06A921871E7D538E001BDFF2 /* Debug */ = {
@@ -340,7 +427,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = GGW8P5ZF85;
-				INFOPLIST_FILE = ImageGram/Info.plist;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = "$(SRCROOT)/ImageGram/Other Files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ai.theowl.ImageGram;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -353,7 +445,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = GGW8P5ZF85;
-				INFOPLIST_FILE = ImageGram/Info.plist;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = "$(SRCROOT)/ImageGram/Other Files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ai.theowl.ImageGram;
 				PRODUCT_NAME = "$(TARGET_NAME)";
