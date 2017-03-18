@@ -13,8 +13,13 @@ import RxCocoa
 import AlamofireImage
 
 
+/**
+ * Displays main feed of images.  Contains a tableView and is backed
+ * by a FeedViewModel.
+ *
+ */
 class FeedViewController: UIViewController {
-    
+
     //MARK: Property
     private let tableView = UITableView(frame: .zero)
     private let viewModel: FeedViewModel //perhaps can be protocol constrained - bound to a generic type
@@ -26,35 +31,40 @@ class FeedViewController: UIViewController {
         refreshControl.addTarget(self, action: #selector(FeedViewController.handleRefresh(_:)), for: UIControlEvents.valueChanged)
         return refreshControl
     }()
-    
+
     override var prefersStatusBarHidden: Bool { return true }
-    
+
     private let disposeBag = DisposeBag()
-    
-    
+
+
     //MARK: Lifecycle
+
+    /**
+     * [viewModel description]
+     * @type {[type]}
+     */
     init(viewModel: FeedViewModel) {
         self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
     }
-    
+
     required init?(coder aDecoder: NSCoder) {
         fatalError("The FeedViewController has not been designed to work with xibs. It needs a FeedViewModel passed via dependency injection to be created.")
     }
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         setup()
     }
-    
-    
+
+
     //MARK: Setup
     private func setup() {
         setupTableView()
         setupBindings()
         viewModel.getPhotos()
     }
-    
+
     private func setupTableView() {
         view.addSubview(tableView)
         tableView.register(FeedTableViewCell.self, forCellReuseIdentifier: FeedTableViewCell.identifier)
@@ -68,17 +78,17 @@ class FeedViewController: UIViewController {
             make.edges.equalTo(view)
         }
     }
-    
+
     private func setupBindings() {
         photos.bindTo(tableView.rx.items) { tv, row, photo in
             FeedTableViewCellFactory.feedCell(tv, forRow: row, photo: photo)
         }.addDisposableTo(disposeBag)
-        
+
         tableView.rx.modelSelected(Photo.self).subscribe(onNext: { photo in
             self.presentPhotoViewController(photo)
         }).addDisposableTo(disposeBag)
     }
-    
+
     //presenter?
     private func presentPhotoViewController(_ photo: Photo) {
         let photoViewController = PhotoViewController(photoURL: photo.url)
@@ -94,7 +104,7 @@ class FeedViewController: UIViewController {
         }
         photoViewController.didMove(toParentViewController: self)
     }
-    
+
     @objc private func handleRefresh(_ refreshControl: UIRefreshControl) {
         viewModel.getPhotos()
         refreshControl.endRefreshing()
