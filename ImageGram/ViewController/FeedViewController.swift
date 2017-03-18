@@ -16,7 +16,6 @@ import AlamofireImage
 /**
  * Displays feed of images.  Contains a tableView and is backed
  * by a FeedViewModel.
- *
  */
 class FeedViewController: UIViewController {
 

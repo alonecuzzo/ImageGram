@@ -10,20 +10,23 @@ import Foundation
 import Alamofire
 
 
+/**
+ * Central source for network routing in the app.
+ */
 enum Router: URLRequestConvertible {
     case getPhotos
-    
+
     var method: HTTPMethod { return .get }
-    
+
     static let baseURLString = "http://jsonplaceholder.typicode.com"
-    
+
     var path: String {
         switch self {
         case .getPhotos:
             return "photos"
         }
     }
-    
+
     func asURLRequest() throws -> URLRequest {
         let url = try Router.baseURLString.asURL()
         var urlRequest = URLRequest(url: url.appendingPathComponent(path))

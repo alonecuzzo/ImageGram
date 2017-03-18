@@ -9,6 +9,9 @@
 import Foundation
 
 
+/**
+ * Backing model for json photo objects.
+ */
 struct Photo {
     let albumID: Int
     let title: String
@@ -28,7 +31,7 @@ extension Photo: ResponseObjectSerializable, ResponseCollectionSerializable {
             let thumbnailURLString = innerRepresentation["thumbnailUrl"] as? String,
             let convertedThumbnailURL = URL(string: thumbnailURLString)
             else { return nil }
-        
+
         self.albumID = albumID
         self.title = title
         self.url = convertedURL

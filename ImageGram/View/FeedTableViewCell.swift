@@ -12,8 +12,11 @@ import UIKit
 
 
 /**
- * [FeedTableViewCell description]
- * @type {[type]}
+ * TableViewCell that contains the imageView and the title label.
+ * Note: I declined to use the textLabel and the imageView that come
+ *       with UITableViewCell for free because I like to see all
+ *       properties listed out explicitly.  I feel it makes the code
+ *       read more expressively.
  */
 class FeedTableViewCell: UITableViewCell {
 
