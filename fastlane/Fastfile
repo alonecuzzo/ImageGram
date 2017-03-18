@@ -50,6 +50,11 @@ platform :ios do
     # frameit
   end
 
+  desc "Generate Docs"
+  lane :jazzydocs do
+    jazzy
+  end
+
   # You can define as many lanes as you want
 
   after_all do |lane|

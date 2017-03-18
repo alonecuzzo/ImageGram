@@ -10,6 +10,7 @@ import Foundation
 import UIKit
 
 
+/// Hey here's a class
 class PhotoViewController: UIViewController {
     
     //MARK: Property
@@ -24,6 +25,21 @@ class PhotoViewController: UIViewController {
         super.init(nibName: nil, bundle: nil)
     }
     
+    
+    4
+    5
+    6
+    7
+    8
+    9
+    10
+    /**
+     This is an extremely complicated method that concatenates the first and last name and produces the full name.
+     
+     - Parameter firstname: The first part of the full name.
+     - Parameter lastname: The last part of the fullname.
+     - Returns: The full name as a string value.
+     */
     required init?(coder aDecoder: NSCoder) {
         fatalError("Cannot be created without a backing photo url.")
     }
