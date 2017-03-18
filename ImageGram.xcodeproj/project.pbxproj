@@ -27,6 +27,7 @@
 		06A921B51E7D7596001BDFF2 /* FeedTableViewCellFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06A921B41E7D7596001BDFF2 /* FeedTableViewCellFactory.swift */; };
 		06A921B81E7D77F0001BDFF2 /* FeedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06A921B71E7D77F0001BDFF2 /* FeedViewModel.swift */; };
 		06A921BA1E7D7E86001BDFF2 /* FeedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06A921B91E7D7E86001BDFF2 /* FeedTableViewCell.swift */; };
+		06A921BC1E7D8779001BDFF2 /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06A921BB1E7D8779001BDFF2 /* PhotoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,7 @@
 		06A921B41E7D7596001BDFF2 /* FeedTableViewCellFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FeedTableViewCellFactory.swift; path = View/FeedTableViewCellFactory.swift; sourceTree = "<group>"; };
 		06A921B71E7D77F0001BDFF2 /* FeedViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FeedViewModel.swift; path = ViewModel/FeedViewModel.swift; sourceTree = "<group>"; };
 		06A921B91E7D7E86001BDFF2 /* FeedTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FeedTableViewCell.swift; path = View/FeedTableViewCell.swift; sourceTree = "<group>"; };
+		06A921BB1E7D8779001BDFF2 /* PhotoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PhotoViewController.swift; path = ViewController/PhotoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,6 +137,7 @@
 			isa = PBXGroup;
 			children = (
 				06A921901E7D561E001BDFF2 /* FeedViewController.swift */,
+				06A921BB1E7D8779001BDFF2 /* PhotoViewController.swift */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -337,6 +340,7 @@
 				06A921701E7D538E001BDFF2 /* AppDelegate.swift in Sources */,
 				06A921B81E7D77F0001BDFF2 /* FeedViewModel.swift in Sources */,
 				06A921BA1E7D7E86001BDFF2 /* FeedTableViewCell.swift in Sources */,
+				06A921BC1E7D8779001BDFF2 /* PhotoViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

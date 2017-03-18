@@ -10,6 +10,7 @@ import UIKit
 import SnapKit
 import RxSwift
 import RxCocoa
+import AlamofireImage
 
 
 class FeedViewController: UIViewController {
@@ -59,5 +60,24 @@ class FeedViewController: UIViewController {
         photos.bindTo(tableView.rx.items) { tv, row, photo in
             FeedTableViewCellFactory.feedCell(tv, forRow: row, photo: photo)
         }.addDisposableTo(disposeBag)
+        
+        tableView.rx.modelSelected(Photo.self).subscribe(onNext: { photo in
+            self.presentPhotoViewController(photo)
+        }).addDisposableTo(disposeBag)
+    }
+    
+    private func presentPhotoViewController(_ photo: Photo) {
+        let photoViewController = PhotoViewController(photoURL: photo.url)
+        photoViewController.exitClosure = { pvc in
+            pvc.willMove(toParentViewController: nil)
+            pvc.view.removeFromSuperview()
+            pvc.removeFromParentViewController()
+        }
+        addChildViewController(photoViewController)
+        view.addSubview(photoViewController.view)
+        photoViewController.view.snp.makeConstraints { make in
+            make.edges.equalTo(view)
+        }
+        photoViewController.didMove(toParentViewController: self)
     }
 }
