@@ -21,6 +21,14 @@ class FeedViewController: UIViewController {
     private lazy var photos: Observable<[Photo]> = { [unowned self] in
        return self.viewModel.photos.asObservable()
     }()
+    lazy var refreshControl: UIRefreshControl = {
+        let refreshControl = UIRefreshControl()
+        refreshControl.addTarget(self, action: #selector(FeedViewController.handleRefresh(_:)), for: UIControlEvents.valueChanged)
+        return refreshControl
+    }()
+    
+    override var prefersStatusBarHidden: Bool { return true }
+    
     private let disposeBag = DisposeBag()
     
     
@@ -51,6 +59,11 @@ class FeedViewController: UIViewController {
         view.addSubview(tableView)
         tableView.register(FeedTableViewCell.self, forCellReuseIdentifier: FeedTableViewCell.identifier)
         tableView.rowHeight = 200
+        if #available(iOS 10.0, *) {
+            tableView.refreshControl = refreshControl
+        } else {
+            tableView.addSubview(refreshControl)
+        }
         tableView.snp.makeConstraints { make in
             make.edges.equalTo(view)
         }
@@ -66,6 +79,7 @@ class FeedViewController: UIViewController {
         }).addDisposableTo(disposeBag)
     }
     
+    //presenter?
     private func presentPhotoViewController(_ photo: Photo) {
         let photoViewController = PhotoViewController(photoURL: photo.url)
         photoViewController.exitClosure = { pvc in
@@ -79,5 +93,10 @@ class FeedViewController: UIViewController {
             make.edges.equalTo(view)
         }
         photoViewController.didMove(toParentViewController: self)
+    }
+    
+    @objc private func handleRefresh(_ refreshControl: UIRefreshControl) {
+        viewModel.getPhotos()
+        refreshControl.endRefreshing()
     }
 }
