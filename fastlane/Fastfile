@@ -52,7 +52,7 @@ platform :ios do
 
   desc "Generate Docs"
   lane :jazzydocs do
-    jazzy
+    jazzy(config: ".jazzy.yaml")
   end
 
   # You can define as many lanes as you want
