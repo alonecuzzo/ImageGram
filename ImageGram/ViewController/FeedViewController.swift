@@ -14,19 +14,24 @@ import AlamofireImage
 
 
 /**
- * Displays main feed of images.  Contains a tableView and is backed
+ * Displays feed of images.  Contains a tableView and is backed
  * by a FeedViewModel.
  *
  */
 class FeedViewController: UIViewController {
 
     //MARK: Property
+
+    //Private
     private let tableView = UITableView(frame: .zero)
-    private let viewModel: FeedViewModel //perhaps can be protocol constrained - bound to a generic type
+    private let viewModel: FeedViewModel
+    private let disposeBag = DisposeBag()
+
+    //Lazy
     private lazy var photos: Observable<[Photo]> = { [unowned self] in
        return self.viewModel.photos.asObservable()
     }()
-    lazy var refreshControl: UIRefreshControl = {
+    private lazy var refreshControl: UIRefreshControl = { [unowned self] in
         let refreshControl = UIRefreshControl()
         refreshControl.addTarget(self, action: #selector(FeedViewController.handleRefresh(_:)), for: UIControlEvents.valueChanged)
         return refreshControl
@@ -34,14 +39,12 @@ class FeedViewController: UIViewController {
 
     override var prefersStatusBarHidden: Bool { return true }
 
-    private let disposeBag = DisposeBag()
-
 
     //MARK: Lifecycle
 
     /**
-     * [viewModel description]
-     * @type {[type]}
+     * Initializes View Controller with an instance of a FeedViewModel.
+     * - viewModel: A FeedViewModel that serves as the datasource for the tableView.
      */
     init(viewModel: FeedViewModel) {
         self.viewModel = viewModel
@@ -89,7 +92,6 @@ class FeedViewController: UIViewController {
         }).addDisposableTo(disposeBag)
     }
 
-    //presenter?
     private func presentPhotoViewController(_ photo: Photo) {
         let photoViewController = PhotoViewController(photoURL: photo.url)
         photoViewController.exitClosure = { pvc in
