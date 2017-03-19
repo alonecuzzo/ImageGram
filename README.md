@@ -15,6 +15,7 @@ I considered user stories such as `"As a user, I would like to be notified if th
 ## Assumptions
 * I assumed that the json was to be taken as given.  In a real-world scenario I would've spoken to the API devs and tried to get pagination implemented so that there wouldn't be 5,000 keys pulled in per call.  
 * That this should be able to be compilable without using any package managers - that's why all of the frameworks are included.
+* That the 600x600 photo didn't need to fit fully on the screen.
 
 ## Design Choices
 * I went with Reactive + MVVM.  The feed's tableView is bound to a backing viewModel, which handles any data transformations that need to occur after the data is fetched from the API and serialized.

@@ -55,7 +55,7 @@ class PhotoViewController: UIViewController {
 
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        imageView.af_setImage(withURL: photoURL)
+        imageView.setImage(url: photoURL)
     }
 
     @objc private func exitPhotoViewController() {
