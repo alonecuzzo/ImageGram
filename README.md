@@ -10,7 +10,7 @@ I considered the following use cases:
 3. As a user, I would like to be able to tap a photo thumbnail and see a larger photo.
 4. As a user, I would like to tap the larger photo and return to the original list of photo thumbnails.
 
-I considered user stories such as `"As a user, I would like to be notified if there is an error."` as beyond the scope of this assignment.
+I considered user stories such as `"As a user, I would like to be notified if there is an error."` as beyond the scope of this assignment.  I didn't consider error states or preloading states.
 
 ## Assumptions
 * I assumed that the json was to be taken as given.  In a real-world scenario I would've spoken to the API devs and tried to get pagination implemented so that there wouldn't be 5,000 keys pulled in per call.  
