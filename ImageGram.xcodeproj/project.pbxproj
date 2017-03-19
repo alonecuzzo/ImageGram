@@ -10,7 +10,6 @@
 		06A921701E7D538E001BDFF2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06A9216F1E7D538E001BDFF2 /* AppDelegate.swift */; };
 		06A921911E7D561E001BDFF2 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06A921901E7D561E001BDFF2 /* FeedViewController.swift */; };
 		06A921961E7D59DD001BDFF2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 06A921931E7D59DD001BDFF2 /* Assets.xcassets */; };
-		06A921971E7D59DD001BDFF2 /* Base.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 06A921941E7D59DD001BDFF2 /* Base.lproj */; };
 		06A921981E7D59DD001BDFF2 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 06A921951E7D59DD001BDFF2 /* Info.plist */; };
 		06A921A11E7D5C67001BDFF2 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06A9219B1E7D5C67001BDFF2 /* Alamofire.framework */; };
 		06A921A21E7D5C67001BDFF2 /* AlamofireImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06A9219C1E7D5C67001BDFF2 /* AlamofireImage.framework */; };
@@ -36,6 +35,12 @@
 		06A921D81E7DB0C4001BDFF2 /* photos.json in Resources */ = {isa = PBXBuildFile; fileRef = 06A921D71E7DB0C4001BDFF2 /* photos.json */; };
 		06A921DA1E7DB0D6001BDFF2 /* theowl.png in Resources */ = {isa = PBXBuildFile; fileRef = 06A921D91E7DB0D6001BDFF2 /* theowl.png */; };
 		06BA8EC91E7EE410006E4B6D /* UIImageView+Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06BA8EC81E7EE410006E4B6D /* UIImageView+Network.swift */; };
+		06BA8ECB1E7EFA51006E4B6D /* UIColor+ImageGram.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06BA8ECA1E7EFA51006E4B6D /* UIColor+ImageGram.swift */; };
+		06BA8ED21E7EFFA5006E4B6D /* Raleway-ExtraLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = 06BA8ECE1E7EFFA5006E4B6D /* Raleway-ExtraLight.otf */; };
+		06BA8ED31E7EFFA5006E4B6D /* Raleway-Heavy.otf in Resources */ = {isa = PBXBuildFile; fileRef = 06BA8ECF1E7EFFA5006E4B6D /* Raleway-Heavy.otf */; };
+		06BA8ED41E7EFFA5006E4B6D /* Raleway-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 06BA8ED01E7EFFA5006E4B6D /* Raleway-Medium.otf */; };
+		06BA8ED51E7EFFA5006E4B6D /* Raleway-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = 06BA8ED11E7EFFA5006E4B6D /* Raleway-Thin.otf */; };
+		06BA8ED71E7EFFE4006E4B6D /* UIFont+ImageGram.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06BA8ED61E7EFFE4006E4B6D /* UIFont+ImageGram.swift */; };
 		06BD4EEF1E7EDC9000CDD2D2 /* DeepFeedViewModelSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06BD4EEE1E7EDC9000CDD2D2 /* DeepFeedViewModelSpec.swift */; };
 		06BD4EF11E7EDCC300CDD2D2 /* TestHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06BD4EF01E7EDCC300CDD2D2 /* TestHelper.swift */; };
 /* End PBXBuildFile section */
@@ -57,7 +62,6 @@
 		06A921861E7D538E001BDFF2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		06A921901E7D561E001BDFF2 /* FeedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FeedViewController.swift; path = ViewController/FeedViewController.swift; sourceTree = "<group>"; };
 		06A921931E7D59DD001BDFF2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = "Other Files/Assets.xcassets"; sourceTree = "<group>"; };
-		06A921941E7D59DD001BDFF2 /* Base.lproj */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Base.lproj; path = "Other Files/Base.lproj"; sourceTree = "<group>"; };
 		06A921951E7D59DD001BDFF2 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = "Other Files/Info.plist"; sourceTree = "<group>"; };
 		06A9219B1E7D5C67001BDFF2 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = SOURCE_ROOT; };
 		06A9219C1E7D5C67001BDFF2 /* AlamofireImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AlamofireImage.framework; path = Carthage/Build/iOS/AlamofireImage.framework; sourceTree = SOURCE_ROOT; };
@@ -83,6 +87,12 @@
 		06A921D71E7DB0C4001BDFF2 /* photos.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = photos.json; path = Resources/Stub/photos.json; sourceTree = "<group>"; };
 		06A921D91E7DB0D6001BDFF2 /* theowl.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = theowl.png; path = Resources/Image/theowl.png; sourceTree = "<group>"; };
 		06BA8EC81E7EE410006E4B6D /* UIImageView+Network.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIImageView+Network.swift"; path = "Extension/UIImageView+Network.swift"; sourceTree = "<group>"; };
+		06BA8ECA1E7EFA51006E4B6D /* UIColor+ImageGram.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIColor+ImageGram.swift"; path = "Extension/UIColor+ImageGram.swift"; sourceTree = "<group>"; };
+		06BA8ECE1E7EFFA5006E4B6D /* Raleway-ExtraLight.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Raleway-ExtraLight.otf"; path = "Resources/Fonts/Raleway-ExtraLight.otf"; sourceTree = "<group>"; };
+		06BA8ECF1E7EFFA5006E4B6D /* Raleway-Heavy.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Raleway-Heavy.otf"; path = "Resources/Fonts/Raleway-Heavy.otf"; sourceTree = "<group>"; };
+		06BA8ED01E7EFFA5006E4B6D /* Raleway-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Raleway-Medium.otf"; path = "Resources/Fonts/Raleway-Medium.otf"; sourceTree = "<group>"; };
+		06BA8ED11E7EFFA5006E4B6D /* Raleway-Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Raleway-Thin.otf"; path = "Resources/Fonts/Raleway-Thin.otf"; sourceTree = "<group>"; };
+		06BA8ED61E7EFFE4006E4B6D /* UIFont+ImageGram.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIFont+ImageGram.swift"; path = "Extension/UIFont+ImageGram.swift"; sourceTree = "<group>"; };
 		06BD4EEE1E7EDC9000CDD2D2 /* DeepFeedViewModelSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DeepFeedViewModelSpec.swift; path = Spec/DeepFeedViewModelSpec.swift; sourceTree = "<group>"; };
 		06BD4EF01E7EDCC300CDD2D2 /* TestHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TestHelper.swift; path = Spec/TestHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -142,6 +152,7 @@
 				06A921B01E7D638E001BDFF2 /* Model */,
 				06A921A71E7D6141001BDFF2 /* Network */,
 				06A921921E7D5867001BDFF2 /* Other Files */,
+				06BA8ECC1E7EFF71006E4B6D /* Resources */,
 				06A921B31E7D7568001BDFF2 /* View */,
 				06A9218F1E7D55EA001BDFF2 /* ViewController */,
 				06A921B61E7D77CF001BDFF2 /* ViewModel */,
@@ -174,7 +185,6 @@
 			isa = PBXGroup;
 			children = (
 				06A921931E7D59DD001BDFF2 /* Assets.xcassets */,
-				06A921941E7D59DD001BDFF2 /* Base.lproj */,
 				06A921951E7D59DD001BDFF2 /* Info.plist */,
 			);
 			name = "Other Files";
@@ -286,9 +296,30 @@
 		06BA8EC71E7EE3BE006E4B6D /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				06BA8ECA1E7EFA51006E4B6D /* UIColor+ImageGram.swift */,
+				06BA8ED61E7EFFE4006E4B6D /* UIFont+ImageGram.swift */,
 				06BA8EC81E7EE410006E4B6D /* UIImageView+Network.swift */,
 			);
 			name = Extension;
+			sourceTree = "<group>";
+		};
+		06BA8ECC1E7EFF71006E4B6D /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				06BA8ECD1E7EFF8E006E4B6D /* Fonts */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		06BA8ECD1E7EFF8E006E4B6D /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				06BA8ECE1E7EFFA5006E4B6D /* Raleway-ExtraLight.otf */,
+				06BA8ECF1E7EFFA5006E4B6D /* Raleway-Heavy.otf */,
+				06BA8ED01E7EFFA5006E4B6D /* Raleway-Medium.otf */,
+				06BA8ED11E7EFFA5006E4B6D /* Raleway-Thin.otf */,
+			);
+			name = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -378,9 +409,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				06A921971E7D59DD001BDFF2 /* Base.lproj in Resources */,
 				06A921961E7D59DD001BDFF2 /* Assets.xcassets in Resources */,
+				06BA8ED21E7EFFA5006E4B6D /* Raleway-ExtraLight.otf in Resources */,
+				06BA8ED51E7EFFA5006E4B6D /* Raleway-Thin.otf in Resources */,
+				06BA8ED41E7EFFA5006E4B6D /* Raleway-Medium.otf in Resources */,
 				06A921981E7D59DD001BDFF2 /* Info.plist in Resources */,
+				06BA8ED31E7EFFA5006E4B6D /* Raleway-Heavy.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -452,7 +486,9 @@
 				06A921701E7D538E001BDFF2 /* AppDelegate.swift in Sources */,
 				06A921B81E7D77F0001BDFF2 /* FeedViewModel.swift in Sources */,
 				06A921BA1E7D7E86001BDFF2 /* FeedTableViewCell.swift in Sources */,
+				06BA8ED71E7EFFE4006E4B6D /* UIFont+ImageGram.swift in Sources */,
 				06A921BC1E7D8779001BDFF2 /* PhotoViewController.swift in Sources */,
+				06BA8ECB1E7EFA51006E4B6D /* UIColor+ImageGram.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

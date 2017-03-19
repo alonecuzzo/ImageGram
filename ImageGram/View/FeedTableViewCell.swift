@@ -44,7 +44,18 @@ class FeedTableViewCell: UITableViewCell {
     }
 
     private func setup() {
+        backgroundColor = .clear
         selectionStyle = .none
+        
+        let bkgrndView = UIView(frame: .zero)
+        bkgrndView.backgroundColor = UIColor(white: 0, alpha: 0.4)
+        bkgrndView.layer.cornerRadius = 10
+        contentView.addSubview(bkgrndView)
+        bkgrndView.snp.makeConstraints { make in
+            make.left.right.equalTo(contentView).inset(20)
+            make.top.bottom.equalTo(contentView).inset(10)
+        }
+        
         let horizontalInset = 32
         contentView.addSubview(photoImageView)
         photoImageView.snp.makeConstraints { make in
@@ -52,13 +63,19 @@ class FeedTableViewCell: UITableViewCell {
             make.width.height.equalTo(150)
             make.left.equalTo(contentView).inset(horizontalInset)
         }
+        photoImageView.layer.cornerRadius = 10
+        photoImageView.clipsToBounds = true
+        photoImageView.layer.borderColor = UIColor.white.cgColor
+        photoImageView.layer.borderWidth = 3
 
         photoTitleLabel.lineBreakMode = .byWordWrapping
         photoTitleLabel.numberOfLines = 0
+        photoTitleLabel.textColor = .white
+        photoTitleLabel.font = UIFont.ralewayExtraLightFontWithSize(20)
         contentView.addSubview(photoTitleLabel)
         photoTitleLabel.snp.makeConstraints { make in
             make.top.equalTo(photoImageView)
-            make.left.equalTo(photoImageView.snp.right).offset(8)
+            make.left.equalTo(photoImageView.snp.right).offset(16)
             make.right.equalTo(contentView).inset(horizontalInset)
         }
     }

@@ -71,6 +71,8 @@ class FeedViewController: UIViewController {
         view.addSubview(tableView)
         tableView.register(FeedTableViewCell.self, forCellReuseIdentifier: FeedTableViewCell.identifier)
         tableView.rowHeight = 200
+        tableView.separatorStyle = .none
+        tableView.backgroundColor = UIColor.imageGramBlue()
         if #available(iOS 10.0, *) {
             tableView.refreshControl = refreshControl
         } else {
