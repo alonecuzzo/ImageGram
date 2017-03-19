@@ -1,5 +1,5 @@
 //
-//  FeedViewModelSpec.swift
+//  ShallowFeedViewModelSpec.swift
 //  ImageGram
 //
 //  Created by Jabari Bell on 3/18/17.
@@ -15,18 +15,23 @@ import Alamofire
 
 @testable import ImageGram
 
-//MAYBE DO SHALLOW VERSION AND DEEP VERSION OF THE VIEW MODEL TEST
 
-class FeedViewModelSpec: QuickSpec {
-    
+/**
+ * This is an example of a shallow test of the FeedViewModel
+ * where two collections of id's are compared.  This might be a
+ * sufficient test for collections of data that use id's as their
+ * unique primary keys. 
+ */
+class ShallowFeedViewModelSpec: QuickSpec {
+
     private let disposeBag = DisposeBag()
-    
+
     override func spec() {
-        
+
         describe("A FeedViewModel") {
-            
+
             //STUB ENDPOINT
-            
+
             stub(condition: { request -> Bool in
                  return request.url?.absoluteString == Router.getPhotos.urlRequest?.url?.absoluteString
                  }, response: { request -> OHHTTPStubsResponse in
@@ -36,29 +41,29 @@ class FeedViewModelSpec: QuickSpec {
                          headers: ["Content-Type": "application/json"]
                  )
             })
-            
+
             context("makes a call to the API") {
-                
+
                 it("should return Photos with the proper album ids.") {
-                    
+
                     //GIVEN
-                    
+
                     let vm = FeedViewModel()
-                    
+
                     waitUntil(timeout: 2, action: { done in
                         vm.photos.asObservable().filter { $0.count > 0 }.subscribe(onNext: { photos in
                             let idsFromAPI = photos.map { $0.albumID }
-                            
+
                             //THEN
-                            
-                            expect(idsFromAPI).to(equal(FeedViewModelSpec.stubbedAlbumIDs))
-                            
+
+                            expect(idsFromAPI).to(equal(ShallowFeedViewModelSpec.stubbedAlbumIDs))
+
                             done()
-                            
+
                         }).addDisposableTo(self.disposeBag)
-                        
+
                         //WHEN
-                        
+
                         vm.getPhotos()
                     })
                 }
@@ -67,18 +72,11 @@ class FeedViewModelSpec: QuickSpec {
     }
 }
 
-class TestHelper {
-    static let shared = TestHelper()
-    var bundle: Bundle {
-        return Bundle(for: type(of: self))
-    }
-}
-
 
 //MARK: Helper
-extension FeedViewModelSpec {
+extension ShallowFeedViewModelSpec {
     fileprivate static var stubbedAlbumIDs: [Int] {
-        
+
          let bundle = TestHelper.shared.bundle
          guard let path = bundle.path(forResource: "photos", ofType: "json") else { fatalError("error finding photos.json file") }
          let jsonData =  Data(referencing: NSData(contentsOfFile: path)!)
