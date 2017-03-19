@@ -35,6 +35,7 @@
 		06A921CF1E7DAF93001BDFF2 /* FeedTableViewCellSnapshotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06A921CE1E7DAF93001BDFF2 /* FeedTableViewCellSnapshotTests.swift */; };
 		06A921D81E7DB0C4001BDFF2 /* photos.json in Resources */ = {isa = PBXBuildFile; fileRef = 06A921D71E7DB0C4001BDFF2 /* photos.json */; };
 		06A921DA1E7DB0D6001BDFF2 /* theowl.png in Resources */ = {isa = PBXBuildFile; fileRef = 06A921D91E7DB0D6001BDFF2 /* theowl.png */; };
+		06BA8EC91E7EE410006E4B6D /* UIImageView+Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06BA8EC81E7EE410006E4B6D /* UIImageView+Network.swift */; };
 		06BD4EEF1E7EDC9000CDD2D2 /* DeepFeedViewModelSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06BD4EEE1E7EDC9000CDD2D2 /* DeepFeedViewModelSpec.swift */; };
 		06BD4EF11E7EDCC300CDD2D2 /* TestHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06BD4EF01E7EDCC300CDD2D2 /* TestHelper.swift */; };
 /* End PBXBuildFile section */
@@ -81,6 +82,7 @@
 		06A921CE1E7DAF93001BDFF2 /* FeedTableViewCellSnapshotTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FeedTableViewCellSnapshotTests.swift; path = SnapshotTests/FeedTableViewCellSnapshotTests.swift; sourceTree = "<group>"; };
 		06A921D71E7DB0C4001BDFF2 /* photos.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = photos.json; path = Resources/Stub/photos.json; sourceTree = "<group>"; };
 		06A921D91E7DB0D6001BDFF2 /* theowl.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = theowl.png; path = Resources/Image/theowl.png; sourceTree = "<group>"; };
+		06BA8EC81E7EE410006E4B6D /* UIImageView+Network.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIImageView+Network.swift"; path = "Extension/UIImageView+Network.swift"; sourceTree = "<group>"; };
 		06BD4EEE1E7EDC9000CDD2D2 /* DeepFeedViewModelSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DeepFeedViewModelSpec.swift; path = Spec/DeepFeedViewModelSpec.swift; sourceTree = "<group>"; };
 		06BD4EF01E7EDCC300CDD2D2 /* TestHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TestHelper.swift; path = Spec/TestHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -135,6 +137,7 @@
 			isa = PBXGroup;
 			children = (
 				06A9216F1E7D538E001BDFF2 /* AppDelegate.swift */,
+				06BA8EC71E7EE3BE006E4B6D /* Extension */,
 				06A921991E7D5A69001BDFF2 /* Frameworks */,
 				06A921B01E7D638E001BDFF2 /* Model */,
 				06A921A71E7D6141001BDFF2 /* Network */,
@@ -278,6 +281,14 @@
 				06A921D71E7DB0C4001BDFF2 /* photos.json */,
 			);
 			name = Stub;
+			sourceTree = "<group>";
+		};
+		06BA8EC71E7EE3BE006E4B6D /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				06BA8EC81E7EE410006E4B6D /* UIImageView+Network.swift */,
+			);
+			name = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -435,6 +446,7 @@
 				06A921911E7D561E001BDFF2 /* FeedViewController.swift in Sources */,
 				06A921AF1E7D6363001BDFF2 /* EndpointSampleStringConvertable.swift in Sources */,
 				06A921A91E7D616E001BDFF2 /* Serialization.swift in Sources */,
+				06BA8EC91E7EE410006E4B6D /* UIImageView+Network.swift in Sources */,
 				06A921AD1E7D630D001BDFF2 /* Router.swift in Sources */,
 				06A921AB1E7D62CA001BDFF2 /* API.swift in Sources */,
 				06A921701E7D538E001BDFF2 /* AppDelegate.swift in Sources */,

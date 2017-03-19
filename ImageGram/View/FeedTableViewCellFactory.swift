@@ -8,7 +8,6 @@
 
 import Foundation
 import UIKit
-import AlamofireImage
 
 
 /**
@@ -19,7 +18,7 @@ enum FeedTableViewCellFactory {
 
     static func feedCell(_ tableView: UITableView, forRow row: Int, photo: Photo) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: FeedTableViewCell.identifier) as! FeedTableViewCell
-        cell.photoImageView.af_setImage(withURL: photo.thumbnailURL)
+        cell.photoImageView.setImage(url: photo.thumbnailURL)
         cell.photoTitle = photo.title
         return cell
     }
